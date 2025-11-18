@@ -33,16 +33,19 @@ class _ItemTaskState extends State<ItemTask> {
         child: Row(
           children: [
             //Checkbox
-            Checkbox(
-              side: BorderSide(color: Colors.white, width: 2),
-              shape: CircleBorder(),
-              value: valorCheckbox,
-              checkColor: Colores.colorExito,
-              onChanged: (valor) {
-                valorCheckbox = valor ?? false;
-                // "??": si valor es null, asignar false
-                setState(() {}); //Actualizar la interfaz
-              },
+            Transform.scale(
+              scale: 1.2,
+              child: Checkbox(
+                side: BorderSide(color: Colors.white, width: 2),
+                shape: CircleBorder(),
+                value: valorCheckbox,
+                checkColor: Colores.colorExito,
+                onChanged: (valor) {
+                  valorCheckbox = valor ?? false;
+                  // "??": si valor es null, asignar false
+                  setState(() {}); //Actualizar la interfaz
+                },
+              ),
             ),
             Expanded(
               child: Text(
