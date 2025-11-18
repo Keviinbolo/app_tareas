@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class ItemTask extends StatefulWidget {
   final bool valorInicialCheckbox;
-  const ItemTask({super.key, this.valorInicialCheckbox = false});
+  final String valorText;
+  const ItemTask({super.key, this.valorInicialCheckbox = false, this.valorText = ""});
 
   @override
   State<ItemTask> createState() => _ItemTaskState();
@@ -22,7 +23,7 @@ class _ItemTaskState extends State<ItemTask> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0),     
       child: Container(
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
@@ -33,7 +34,10 @@ class _ItemTaskState extends State<ItemTask> {
           children: [
             //Checkbox
             Checkbox(
+              side: BorderSide(color: Colors.white, width: 2),
+              shape: CircleBorder(),
               value: valorCheckbox,
+              checkColor: Colores.colorExito,
               onChanged: (valor) {
                 valorCheckbox = valor ?? false;
                 // "??": si valor es null, asignar false
@@ -42,8 +46,8 @@ class _ItemTaskState extends State<ItemTask> {
             ),
             Expanded(
               child: Text(
-                'Ejemplo',
-                style: TextStyle(color: Colores.colorTexto, fontSize: 16),
+                '${widget.valorText}  Tarea pendiente',
+                style: TextStyle(color: Colores.colorTexto, fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),
           ],

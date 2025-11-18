@@ -16,7 +16,7 @@ static Color colorTerciarioAccent = const Color.fromARGB(255, 60, 80, 70); // Ve
 static Color colorExito = const Color.fromARGB(255, 40, 80, 60); // Verde éxito oscuro
 static Color colorPeligro = const Color.fromARGB(255, 100, 40, 40); // Rojo peligro oscuro
 static Color colorAdvertencia = const Color.fromARGB(255, 110, 80, 30); // Ámbar advertencia oscuro
-static Color colorInfo = const Color.fromARGB(255, 30, 70, 100); // Azul info oscuro
+static Color colorInfo = const Color.fromARGB(255, 22, 78, 121); // Azul info oscuro
 
 // Colores neutros
 static Color colorFondo = const Color.fromARGB(255, 20, 20, 30); // Fondo más oscuro

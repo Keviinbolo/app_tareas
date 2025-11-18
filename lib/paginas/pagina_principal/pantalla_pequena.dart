@@ -60,9 +60,10 @@ class PantallaPequena extends StatelessWidget {
           ),
          Expanded(
            child: ListView.builder(
-            itemCount: 30,
+            itemCount: 5
+            ,
             itemBuilder: (context, index) {
-              return  ItemTask();
+              return  ItemTask(valorText: index.toString(),);
             },
            ),
          )
