@@ -43,8 +43,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(context) {
     double medida = MediaQuery.of(context).size.width;
-    print(medida);
-    print('Dispositivo es web: $dispositivoEsWeb');
+    //print(medida);
+    //print('Dispositivo es web: $dispositivoEsWeb');
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: medida < 600
