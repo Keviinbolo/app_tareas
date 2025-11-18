@@ -1,4 +1,5 @@
 import 'package:app_tareas/class/colores.dart';
+import 'package:app_tareas/componentes/item_task.dart';
 import 'package:flutter/material.dart';
 
 class PantallaPequena extends StatelessWidget {
@@ -7,9 +8,10 @@ class PantallaPequena extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colores.colorSecundario,
       appBar: AppBar(
         backgroundColor: Colores.colorPrimari,
-        title: Text(style: TextStyle(color: Colors.white), 'Pantalla Pequeña'),
+        title: Text(style: TextStyle(color: Colores.colorTexto), 'Pantalla Pequeña'),
         actions: [
           IconButton(
             onPressed: () {},
@@ -23,28 +25,49 @@ class PantallaPequena extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
-            backgroundColor: Colors.white,
-            hoverColor: Colors.blueGrey,
+            backgroundColor: Colores.colorPrimari,
+            hoverColor: Colores.colorPrimariAccent,
             shape: CircleBorder(
-              side: BorderSide(color: Colors.black, width: 2),
+              side: BorderSide(color: Colores.colorBorder, width: 2),
             ),
             onPressed: () {},
-            child: Icon(Icons.arrow_forward, color: Colors.black),
+            child: Icon(Icons.arrow_forward, color: Colores.colorTexto),
           ),
           SizedBox(height: 10),
           FloatingActionButton(
-            backgroundColor: Colors.white,
-            hoverColor: Colors.blueGrey,
+            backgroundColor: Colores.colorPrimari,
+            hoverColor: Colores.colorPrimariAccent,
             shape: CircleBorder(
-              side: BorderSide(color: Colors.black, width: 2),
+              side: BorderSide(color: Colores.colorBorder, width: 2),
             ),
             onPressed: () {},
-            child: Icon(Icons.favorite, color: Colors.black,),
+            child: Icon(Icons.favorite, color: Colores.colorTexto,),
           ),
         ],
       ),
 
-      body: Center(child: Text('Pantalla Pequeña')),
+      body: Column(
+        children: [
+          Container(
+            width: double.infinity,
+            height: 2,
+            decoration: BoxDecoration(color: Colors.white, boxShadow: [
+              BoxShadow(
+                blurRadius: 5,
+
+              ),
+            ]),
+          ),
+         Expanded(
+           child: ListView.builder(
+            itemCount: 30,
+            itemBuilder: (context, index) {
+              return  ItemTask();
+            },
+           ),
+         )
+        ],
+      ),
     );
   }
 }
