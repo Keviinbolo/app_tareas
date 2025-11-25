@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BotonDialog extends StatelessWidget {
-  const BotonDialog({super.key});
+  final String textbutton;
+  const BotonDialog({super.key, required this.textbutton});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +11,7 @@ class BotonDialog extends StatelessWidget {
         children: [
           Icon(Icons.add),
           SizedBox(width: 8),
-          Text('Agregar')
+          Text(textbutton)
         ],
       ),
     );

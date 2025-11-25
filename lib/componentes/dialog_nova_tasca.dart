@@ -1,3 +1,4 @@
+import 'package:app_tareas/componentes/boton_dialog.dart';
 import 'package:flutter/material.dart';
 
 class DialogNovaTasca extends StatelessWidget {
@@ -6,8 +7,22 @@ class DialogNovaTasca extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Text("Nueva Tarea"),
-      content: Text("Agregar algo nuevo"),
+      title: Text("Nueva Tarea",),
+      content: Container(
+        child: Column(
+          children: [
+            TextField(
+
+            ),
+            Row(
+              children: [
+                BotonDialog(textbutton: "Agregar"),
+                BotonDialog(textbutton: "Cancelar"),
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }
