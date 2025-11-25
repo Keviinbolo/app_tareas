@@ -5,6 +5,9 @@ class DialogNovaTasca extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog();
+    return AlertDialog(
+      title: Text("Nueva Tarea"),
+      content: Text("Agregar algo nuevo"),
+    );
   }
 }
